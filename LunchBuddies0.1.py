@@ -1,14 +1,11 @@
-
 """
 Created on Tue Oct 19 18:52:59 2021
-
 @author: Lunch Buddies
 https://pythonawesome.com/a-bot-created-with-python-that-interacts-with-groupme/amp/
 https://www.geeksforgeeks.org/simple-chat-room-using-python/amp/
 https://stackoverflow.com/questions/44663389/python-creating-username-and-password-program/44663415
 https://stackoverflow.com/questions/7014953/i-need-to-securely-store-a-username-and-password-in-python-what-are-my-options
 https://www.thepythoncode.com/article/get-geolocation-in-python
-
 """
 import socket
 from threading import Thread
@@ -31,6 +28,7 @@ def Main():
 
 
 
+
 def Startmenu():
     print("************Welcome to FakeFlix Demo**************")
     print()
@@ -39,7 +37,6 @@ def Startmenu():
                       A: Please Register
                       B: Login
                       Q: Logout
-
                       Please enter your choice: """)
 
     if decision == "A" or decision =="a":
@@ -115,8 +112,33 @@ def SidebarMenu():
     print("*")
     
 def Settings():
-    print("*")
-    print("These are settings")
+    Settingschoice = input("""What would you like to do now?
+                          Change Password [1]
+                          
+                          Go to the Location Settings [2] 
+
+                          Go to Home screen [3]
+                          
+                          Go back [b]
+                          """)
+    if Settingschoice == "1":
+        ChangePassword()
+    elif Settingschoice == "2":
+        LocationSettings()
+    elif Settingschoice == "3":
+        MainMenu()
+    elif Settingschoice == "b":
+        MainMenu()
+
+
+
+
+def ChangePassword():
+    print("Change Password")
+    input("type your new password: ")
+    input("Confirm the password: ")
+    pass
+    
     
 def LocationSettings():
     print("location settings")
@@ -348,12 +370,10 @@ state2 = "California"
 city2 = "Orange"
 age2 = 21
 interests2 = "books, tv"
-
 location2 = state2 + ", " + city2
 person2Characterized = [name2, location2, age2, interests2]
 print('This is a potential match!')
 print(person2Characterized)
-
 name1 = input("what is your name? ")
 state1 = input("What state you are in, not emotionally: ")
 city1 = input("Please name what city you live in: ")
@@ -361,7 +381,6 @@ age1 = input("How young are you? XD: ")
 interests1 = input(""Name anything you are interested in: Do this in a comma seperated list
                    For Example: dodgeball, videogames, books:
                         ")
-
 location1 = state1 + ", " + city1
 person1Characterized = [location1, age1, interests1]
 print("This is you!")
@@ -370,7 +389,6 @@ print(person1Characterized)
 print("   ")
 print("   ")
 print("   ")
-
 for i in interests1:
     if i in interests2:
         print("You've got a match!")
@@ -386,8 +404,5 @@ for i in interests1:
     else:
         print("sorry nobody matches your interests")
     break
-
 #####pseudoCode end
-
 """
-
